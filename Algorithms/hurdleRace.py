@@ -11,14 +11,16 @@ def hurdleRace(k, height):
     # Write your code here
     # find max from the k
 
-    # if max_k < =height:
-    if max(k) <= height:
-        # return 0
-        return 0
-    # else:
+    # def hurdleRace(k, height):
+    #     # Write your code here
+    #     # find max from the k
+
+    #     # if max_k < =height:
+    if k >= max(height):
+        return(0)
+#     # else:
     else:
-        # return max(k)-height
-        return max(k)-height
+        return(max(height)-k)
 
 
-print(hurdleRace([1, 6, 3, 5, 2], 4))
+print(hurdleRace(4, [1, 6, 3, 5, 2]))
