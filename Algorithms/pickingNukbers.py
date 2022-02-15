@@ -10,35 +10,26 @@ def pickingNumbers(a):
     # a_list = []
     max = 0
     count = 0
+    a.sort()
+    # print(a)
     # print(a)
     # # loop till the all of a
-    # for i in a:
-    #     # loop with inner loop
-    #     for j in range(i+1, len(a)):
-    #         # for
-    #         print(i, a[j], " = ", abs(i-a[j]), end=" ")
-    #         if(abs(i-j) <= 1):
-    #             print("in ")
-    # print()
-    #             a_list.append(a[i])
-    #         print()
-    # print("\n List =", a_list)
-    pass
-    # maxlength=1
-    # check all possible subarrays for i in rane(n):
-    # #initalize minimum and maximum of current subarray
-    # #minOfSub=a[i]
-    # #maxOfSub=a[i]
-    # #loop from i+1 till n
-    #     #update max and min values if conditions meet
-    #     #if(arr[j]>maxOfSub)
-    #         #maxOfSub=arr[j]
-    #     if(arr[j]<minOfSub)
-    #         minOfSub=arr[j]
+    for i in range(len(a)):
+        #     # loop with inner loop
+        # print(i, "st:")
+        for j in range(i+1, len(a)):
+            #         # for
+            #         print(i, a[j], " = ", abs(i-a[j]), end=" ")
+            # print(a[i], a[j])
+            if abs(a[i]-a[j]) <= 1:
+                count += 1
+                # print("andr")
+        if count > max:
+            max = count
+            # print(max)
+        count = 0
 
-    #     #check if current subarray satisfies the condition
-    #     if(maxofSub-minOfSub)<=k:
-    #         curr
+    return max + 1
 
 
-pickingNumbers([1, 1, 2, 2, 4, 4, 5, 5, 5])
+print(pickingNumbers([4, 6, 5, 3, 3, 1]))
