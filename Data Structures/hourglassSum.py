@@ -7,7 +7,7 @@
 
 def hourglassSum(arr):
     # Write your code here
-    max_square_sum = 0
+    max_square_sum = -100
     # 1st section
     for square_count in range(0, 4):
         #print("count = ", square_count)
@@ -97,15 +97,15 @@ def hourglassSum(arr):
           #  print()
         max_square_sum = max(max_square_sum, count_square_sum)
         #print("Max sum Square =", max_square_sum)
-    return(max_square_sum)
+    print(max_square_sum)
 
 
-hourglassSum([[-9, -9, -9, 1, 1, 1],
-              [0, -9, 0, 4, 3, 2],
-              [-9, -9, -9, 1, 2, 3],
-              [0, 0, 8, 6, 6, 0],
-              [0, 0, 0, -2, 0, 0],
-              [0, 0, 1, 2, 4, 0]])
+hourglassSum([[-1, -1, 0, -9, -2, -2],
+              [-2, -1, -6, -8, -2, -5],
+              [-1, -1, -1, -2, -3, -4],
+              [-1, -9, -2, -4, -4, -5],
+              [-7, -3, -3, -2, -9, -9],
+              [-1, -3, -1, -2, -4, -5]])
 
 
 #             [-9, -9, -9, 1, 1, 1],
