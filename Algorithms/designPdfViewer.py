@@ -18,12 +18,9 @@ import sys
 
 def designerPdfViewer(h, word):
     # Write your code here
-    # making a array of all characters
-    char_array = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
-                  "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     # spliting word string in an array
     word_array = list(word)
-    print(word_array)
+    # print(word_array)
 
     # finding ACII calue of a char and indexing them 0-25
     ascii_array = []
@@ -44,9 +41,9 @@ def designerPdfViewer(h, word):
                 count += 1
                 letter_heights.append(h[i])
                 # print(h[i])
-    print(max(letter_heights)*len(word_array))
-    # print(word_array)
+    # returning max letter_height *len of array
+    return(max(letter_heights)*len(word_array))
 
 
-designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5,
-                  5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7], "zaba")
+print(designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5,
+                         5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7], "zaba"))
