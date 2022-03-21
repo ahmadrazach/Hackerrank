@@ -21,13 +21,13 @@ def utopianTree(n):
                 height = 2
             else:
                 height *= 2
-            print("odd :", height)
+            # print("odd :", height)
         # if even (2,4,6,8)
         else:
             height += 1
-            print("even :", height)
+            # print("even :", height)
         # height+=2
     return(height)
 
 
-print(utopianTree(5))
+print(utopianTree(4))
