@@ -8,20 +8,27 @@
 #  3. INTEGER k
 #
 
+def reverse(n):
+    Number = n  
+    Reverse = 0    
+    while(Number > 0):    
+        Reminder = Number %10    
+        Reverse = (Reverse *10) + Reminder    
+        Number = Number //10  
+    return(Reverse)
 
 def beautifulDays(i, j, k):
     # Write your code here
     #loop from ith value to j
+    beautiful_days=0
+    for value in range(i,j+1):
     # num = 1234
     # reversed_num = 0
+        if (abs(value-reverse(value))%k==0):
+            beautiful_days+=1
 
-    # while num != 0:
-    # digit = num % 10
-    # reversed_num = reversed_num * 10 + digit
-    # num //= 10
-    # take the following calculation |i-reverse(i)|/k , if ans in whole no (leaving no remainder while division), count no.
-    #return the counted no.
-    return k
+        
+    return beautiful_days
 
 print(beautifulDays(20,23,6))
 
