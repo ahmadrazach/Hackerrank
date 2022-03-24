@@ -5,6 +5,8 @@
 # The function accepts INTEGER n as parameter.
 #
 
+import math
+
 def viralAdvertising(n):
     # Write your code here
 
@@ -22,7 +24,16 @@ def viralAdvertising(n):
     # shared_people=like_people*3
     
     # 
-    return n
+    cummulative=0
+    shared_people=5
+    liked_people=0
+    for i in range(n):
+        # print(i)
+        liked_people=math.floor(shared_people/2)
+        cummulative+=liked_people
+        shared_people=liked_people*3
+        # print(cummulative)
+    return cummulative
 
 
-print(viralAdvertising(10))
+print(viralAdvertising(5))
