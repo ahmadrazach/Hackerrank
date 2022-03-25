@@ -17,7 +17,7 @@ def saveThePrisoner(n, m, s):
     # while (count!=m)
     while(count != m):
         # count+=1]
-        # print("count:", count)
+        print("count:", count)
         if(chair_no == n):
             # if(prisoner_no==n)
             chair_no = 1
@@ -25,9 +25,9 @@ def saveThePrisoner(n, m, s):
         else:
             chair_no += 1
     # else: chari_no+=1
-        # print("chair _no:", chair_no)
+        print("chair _no:", chair_no)
         count += 1
     return chair_no
 
 
-print(saveThePrisoner(3, 7, 3))
+print(saveThePrisoner(46934 ,543563655 ,46743))
