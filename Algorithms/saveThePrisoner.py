@@ -11,12 +11,23 @@
 def saveThePrisoner(n, m, s):
     # Write your code here
     # count=0
+    count = 1
     # chair_no=s
+    chair_no = s
     # while (count!=m)
-    #count+=1
-    #if(prisoner_no==n)
-    #chair_no=1
-    #else: chari_no+=1
+    while(count != m):
+        # count+=1]
+        # print("count:", count)
+        if(chair_no == n):
+            # if(prisoner_no==n)
+            chair_no = 1
+    # chair_no=1
+        else:
+            chair_no += 1
+    # else: chari_no+=1
+        # print("chair _no:", chair_no)
+        count += 1
+    return chair_no
 
 
-print(saveThePrisoner(5, 2, 1))
+print(saveThePrisoner(3, 7, 3))
