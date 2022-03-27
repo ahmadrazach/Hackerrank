@@ -15,18 +15,21 @@ def saveThePrisoner(n, m, s):
     # chair_no=s
     chair_no = s
     # while (count!=m)
-    while(count != m):
-        # count+=1]
-        print("count:", count)
-        if(chair_no == n):
-            # if(prisoner_no==n)
-            chair_no = 1
-    # chair_no=1
-        else:
-            chair_no += 1
-    # else: chari_no+=1
-        print("chair _no:", chair_no)
-        count += 1
+    # while(count != m):
+    #     # count+=1]
+    #     print("count:", count)
+    #     if(chair_no == n):
+    #         # if(prisoner_no==n)
+    #         chair_no = 1
+    # # chair_no=1
+    #     else:
+    #         chair_no += 1
+    # # else: chari_no+=1
+    #     print("chair _no:", chair_no)
+    #     count += 1
+    for i in male
+
+    #give it a go with for loop
     return chair_no
 
 
