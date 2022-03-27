@@ -17,7 +17,7 @@ function circularArrayRotation(a, k, queries){
         a.unshift(a.pop(a))
     }
     //  console.log(a)
-    q_arr=[]
+    let q_arr=[]
     // console.log(queries.length)
     for(let i=0;i<queries.length;i++){
         // console.log(queries[i])
