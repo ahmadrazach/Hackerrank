@@ -4,25 +4,26 @@
  * The function is expected to return an INTEGER_ARRAY.
  * The function accepts INTEGER_ARRAY p as parameter.
  */
+//const eqIndex=(x)=>x;
 
 function permutationEquation(p) {
     // Write your code here
-    console.log(p)
+   // console.log(p)
     p.unshift(0)
-    console.log(p)
-    loopi=[]
-    // loop till the array size
+    // console.log(p)
+    let loop=[]
+    // loop to check
+    //loop till the array size
     for (let i=1;i<p.length;i++)
     {
-        console.log("x=",i,"=== p[",p.indexOf(p[i]),"]",", p[",p[p[i]],"]")
-        loopi.push(p[p[i]])
+        //giving the position to the position of array
+        loop.push(p.indexOf(p.indexOf(i)))
     }
-    console.log(loopi)
-        
-
+    
+    return(loop);
     
 
 }
 
 
-console.log(permutationEquation([5,2,1,3,4]))
+console.log(permutationEquation([2,3,1]))
