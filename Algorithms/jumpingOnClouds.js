@@ -1,12 +1,18 @@
 // Complete the jumpingOnClouds function below.
 function jumpingOnClouds(c,k) {
 
-    for(let i=0;i<c.length;i++)
+    let energy=100
+    for(let i=0;i<c.length;i+=k)
     {
-        console.log((i+k)%c.length)
+        energy-=1
+        if(c[i]==1){
+            energy-=2
+        }
+                
+        console.log("i= ",i,"c[i]",c[i],"energy =",energy)
     }
-    
+    return energy;
     
 }
 
-jumpingOnClouds([0, 0, 1, 0, 0, 1, 1, 0],2)
+console.log(jumpingOnClouds([1 ,1, 1, 0, 1, 1 ,0 ,0 ,0, 0],3))
