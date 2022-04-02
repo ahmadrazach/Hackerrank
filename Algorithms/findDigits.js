@@ -10,8 +10,14 @@ function findDigits(n) {
 //converting the number into the string-> spliting eac number into array->converting it back to int 
 var digits = n.toString().split('').map(iNum => parseInt(iNum, 10));
 //loop till the n size
-//check if digit's modulus by n is zero?save in a counter:pass
-
+let count=0
+for (var i=0;i<digits.length;i++)
+{
+    //check if digit's modulus by n is zero?save in a counter:pass
+    (n%digits[i]==0?count+=1:count=count )
 }
 
-findDigits(124)
+return(count)
+}
+
+findDigits(1012)
