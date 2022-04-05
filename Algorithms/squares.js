@@ -22,11 +22,11 @@ function squares(a, b) {
         if(Math.sqrt(i) % 1 === 0)
         {
             start_sqaure_number=Math.sqrt(i)
-            console.log("Milla",start_sqaure_number)
+            //console.log("Milla",start_sqaure_number)
             break;
         }
     }
-    console.log(start_sqaure_number)
+    //console.log(start_sqaure_number)
 
     //checking agr koi milla hey
     if(start_sqaure_number!=0){
@@ -34,14 +34,15 @@ function squares(a, b) {
         last_sqaure_number=0
         for(let i=b;i>a;i--)
         {
+                
             if(Math.sqrt(i) % 1 === 0)
             {
                 last_sqaure_number=Math.sqrt(i)
-                console.log("Milla",last_sqaure_number)
+                //console.log("Milla",last_sqaure_number)
                 break;
             }
         }
-        console.log(last_sqaure_number)
+        //onsole.log(last_sqaure_number)
 
 
         
