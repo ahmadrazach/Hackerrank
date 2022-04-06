@@ -13,9 +13,7 @@
 
 function libraryFine(d1, m1, y1, d2, m2, y2) {
     // Write your code here
-    let fine =0
-    const month_days=30
-    // (y2===y1 ? (m2 === m1?( d2===d1 ?fine=fine :15*(d2-d1) ): ):y2>y1)
+        // (y2===y1 ? (m2 === m1?( d2===d1 ?fine=fine :15*(d2-d1) ): ):y2>y1)
     // y2===y1 
     //     ? m2 === m1?
     //         d2===d1 
@@ -42,6 +40,10 @@ function libraryFine(d1, m1, y1, d2, m2, y2) {
 
     //     }
     // }
+    
+    let fine =0
+    // const month_days=30
+
     //condtitoon 1
     if(y2===y1&&m2===m1&&d2===d1){
         return fine
@@ -49,23 +51,23 @@ function libraryFine(d1, m1, y1, d2, m2, y2) {
     //condition 2
     else if(y2===y1&&m2===m1&&d1>d2)
     {
-        console.log("c2")
+        // console.log("c2")
         return 15*(d1-d2)
     }
     //condition 3
     else if(y2===y1&&m1>m2)
     {
-        console.log("c3")
+        //console.log("c3")
         return 500*(m1-m2)
     }
     //condition 4
      else if(y1>y2)
      {
-         console.log("c4")
-         return 1000
+         //console.log("c4")
+         return 10000
      }    
 
     return fine;
 }
 
-console.log(libraryFine(9,6,2015,6,6,2015))
+console.log(libraryFine(2,7,2015,1,2,2014))
