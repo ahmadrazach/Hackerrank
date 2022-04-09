@@ -14,16 +14,16 @@ function compare(a, b) {
         }
     }
 
-function cutTheSticks(arr) {
-    // Write your code here
-    //while all are not the same
-    let smallest_num=0
-    console.log("Array : ",arr)
-
-    arr.sort(compare)
-    console.log("Sorted : ",arr)
-    let sticks_at_each_count=[arr.length]
-    while(arr.every(v => v === arr[0])===false)
+    function cutTheSticks(arr) {
+        //while all are not the same
+        let smallest_num=0
+        console.log("Array : ",arr)
+        
+        arr.sort(compare)
+        console.log("Sorted : ",arr)
+        let sticks_at_each_count=[arr.length]
+        while(arr.every(v => v === arr[0])===false)
+        // Write your code here
     {
     //     //1,2,3
             // console.log("loop")
@@ -31,7 +31,7 @@ function cutTheSticks(arr) {
              //take out the smallest_num/s from the array
             arr = arr.filter((number) => number > smallest_num);
             // console.log("Filter num",arr)
-            //subtracting every element with the smallest num
+            // // sticks_at_each_count.push(arr.length)
             arr=arr.map((number)=>number-1)
             // console.log("after subtraction of smallest number : ",arr)
             sticks_at_each_count.push(arr.length)
