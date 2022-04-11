@@ -32,6 +32,6 @@ function repeatedString(s, n) {
    
     return s.match(matching_num).length
 }
-
+zxcxz
 
 console.log(repeatedString('ababa',3))
