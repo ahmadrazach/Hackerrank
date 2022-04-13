@@ -7,12 +7,21 @@
 
 function equalizeArray(arr) {
     // Write your code here
-    
+    let delete_no=0
     //sort the array
     arr.sort((a,b)=>a-b)
-    return PluginArray
+    for(let i=0;i<arr.length;i++)
+    {
+        
+        if((i!=arr.length-1&&arr[i]!=arr[i+1])||(i===arr.length-1&&arr[i]!=arr[i-1]))
+        {
+            delete_no++;
+            // console.log(arr[i],delete_no)
+        }
+    }
+    return delete_no;
     //if the next index is not same?count++:
 
 }
 
-console.log(equalizeArray([1,2,2,3]))
+console.log(equalizeArray([3, 3, 2, 1, 3 ]))
