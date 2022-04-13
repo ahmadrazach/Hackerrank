@@ -7,21 +7,25 @@
 
 function equalizeArray(arr) {
     // Write your code here
-    let delete_no=0
-    //sort the array
-    arr.sort((a,b)=>a-b)
-    for(let i=0;i<arr.length;i++)
+    var mf = 1; // most frequent no. that's reqpeating globally
+    var m = 0; //most frquqnet no. to check in a loop
+    // var item;
+    for (var i=0; i<arr.length; i++)
     {
-        
-        if((i!=arr.length-1&&arr[i]!=arr[i+1])||(i===arr.length-1&&arr[i]!=arr[i-1]))
-        {
-            delete_no++;
-            // console.log(arr[i],delete_no)
-        }
+            for (var j=i; j<arr.length; j++)
+            {
+                    if (arr[i] == arr[j])
+                     m++;
+                    if (mf<m)
+                    {
+                      mf=m; 
+                    //   item = arr[i];
+                    }
+            }
+            m=0;
     }
-    return delete_no;
-    //if the next index is not same?count++:
 
+    return arr.length-mf
 }
 
-console.log(equalizeArray([3, 3, 2, 1, 3 ]))
+console.log(equalizeArray([3, 3, 2, 1, 3]))
