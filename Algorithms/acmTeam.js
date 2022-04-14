@@ -21,13 +21,34 @@ function acmTeam(topic) {
     let members_subject=topic_array.splice(2,total_members)
     console.log("Members Subject Array->",members_subject)
     console.log('For Loop\n');
+    //slipting array in the 2d
+    let members_subject_2d=[]
     for(let i=0;i<members_subject.length;i++){
         // console.log(members_subject[i].match(/1/g).length)
-        console.log("Member ",i+1,members_subject[i].split(''))
-        for(let j=i+1;j<members_subject.length;j++)
-            {
-                
-            }
+        members_subject_2d.push(members_subject[i].split(''))
+        
+        // console.log("Member ",i+1,)
+        // for(let j=i+1;j<members_subject.length;j++)
+        //     {
+        //         console.log(members_subject[i][j])
+        //     }
+    }
+    console.log("2d array -> ",members_subject_2d)
+    //loop to check to compare the index of the two arrays
+    console.log("Loop result \n" );
+
+    //loop to take index of two arrays and compare them
+    for(let i=0;i<members_subject_2d.length;i++)
+    {
+        console.log('2darray-> i ',i,)
+        // //2nd array to compare
+        // for(let second_array=i+1;second_array<members_subject_2d.length;second_array++){
+        //     console.log('2darray-> j',second_array)
+        // }  
+        for(let j=0;j<members_subject_2d[i].length;j++)
+        {
+            console.log(i,j,"-",i+1,j)
+        }
     }
     // console.log((topic_array.substring(,topic_array.indexOf(' '))))
 }
