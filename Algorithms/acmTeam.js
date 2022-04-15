@@ -35,21 +35,27 @@ function acmTeam(topic) {
     }
     console.log("2d array -> ",members_subject_2d)
     //loop to check to compare the index of the two arrays
-    console.log("Loop result \n" );
-
-    //loop to take index of two arrays and compare them
-    for(let i=0;i<members_subject_2d.length;i++)
-    {
-        console.log('2darray-> i ',i,)
-        // //2nd array to compare
-        // for(let second_array=i+1;second_array<members_subject_2d.length;second_array++){
-        //     console.log('2darray-> j',second_array)
-        // }  
-        for(let j=0;j<members_subject_2d[i].length;j++)
-        {
-            console.log(i,j,"-",i+1,j)
+    console.log("Possiblilites \n" );
+    //looping to check al possible comparisons
+    for(let row=0;row< members_subject_2d.length;row++){
+        for(let col=row+1 ;col<members_subject_2d.length;col++){
+            console.log(members_subject_2d[row],members_subject_2d[col])
         }
+        
     }
+    //loop to take index of two arrays and compare them
+    // for(let i=0;i<members_subject_2d.length;i++)
+    // {
+    //     console.log('2darray-> i ',members_subject_2d[i])
+    //     // //2nd array to compare
+    //     // for(let second_array=i+1;second_array<members_subject_2d.length;second_array++){
+    //     //     console.log('2darray-> j',second_array)
+    //     // }  
+    //     for(let j=0;j<members_subject_2d[i].length;j++)
+    //     {
+    //         console.log(i,j,"-",i+1,j)
+    //     }
+    // }
     // console.log((topic_array.substring(,topic_array.indexOf(' '))))
 }
 
