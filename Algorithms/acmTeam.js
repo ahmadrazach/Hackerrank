@@ -12,7 +12,7 @@ function acmTeam(topic) {
     // Write your code here
     let ourRegex=/[0-9]/g
     //replacing nextline with the array ant and saving in the array
-    topic_array=topic.replace(/\n/g," ").split(/ /)
+    let topic_array=topic.toString().replace(/\n/g," ").split(/ /)
     //console.log("Converted array->",topic_array)
     //take 1st element to utni loop chlani hey
     let total_members=parseInt(topic_array[0])
@@ -33,6 +33,7 @@ function acmTeam(topic) {
    
     let teams_total=[]
     let max_subjects=0
+    
     for(let row=0;row< members_subject_2d.length;row++){
         for(let row2=row+1 ;row2<members_subject_2d.length;row2++){
             //console.log(members_subject_2d[row],members_subject_2d[row2])
@@ -60,7 +61,9 @@ function acmTeam(topic) {
     // //counting occurences of max subject topics between teams
     // console.log("total teams ",countOccurrences(teams_total, max_subjects) )
     // console.log("max : ",max_subjects)
-    return [max_subjects,countOccurrences(teams_total, max_subjects)]
+    // console.log(max_subjects)
+    // let  r=new int[2];
+    return [max_subjects,countOccurrences(teams_total, max_subjects)];
 }
 
 console.log(acmTeam(`6 5
