@@ -15,16 +15,15 @@ function kaprekarCheck(num)
     if( ((square.toString().length)===(2*num_digits)) || ((square.toString().length)===(2*num_digits-1)))
     {
         //5- split no. into 2 substrings
-        // console.log(square.toString().match(/.{1}/g))
-        size=parseInt(square.toString().length/2).toString()
-        // console.log(size)
-        // console.log(size)
-        var regex = new RegExp(".{"+ size+"}", 'g' );
-        let substrings=square.toString().match(regex)
+        let split=square.toString()
+        // console.log(num_digits)
+        let substrings=[split.slice(0,-num_digits),split.slice(-num_digits)]
         // console.log(substrings)
+        
         //6- right substring should be equal to the digit
         if(num_digits===substrings[1].length)
         {
+            
             //7- convert substrings to int, add them to see if we get the n
             if((parseInt(substrings[0])+parseInt((substrings[1]))===num))
             {
@@ -34,21 +33,18 @@ function kaprekarCheck(num)
         }
         else return false
         
-        
         //8- return true or false w.r.t no. 7
     }
     return false
-    
-   
-    
 }
+
 function kaprekarNumbers(p, q) {
     // Write your code here
     let result_string="";
+    
     //1- Loop from range p,q
     for(let num=p;num<=q;num++)
-    {
-        
+    {    
         // console.log(num)
         //2- take number as temp and pass it to function
         if(kaprekarCheck(num)===true || num ===1)
@@ -60,11 +56,8 @@ function kaprekarNumbers(p, q) {
         
     }
     //10- if string.length>1 return string else INVALID 
-    if(result_string.length>0)
-    return result_string
-    return "INVALID RANGE"
-
-    
+    if(result_string.length>0) console.log(result_string)
+    else console.log("INVALID RANGE")
 }
-// console.log(kaprekarCheck(99))
-console.log(kaprekarNumbers(1,100))
+// console.log(kaprekarCheck(9))
+kaprekarNumbers(1,300)
