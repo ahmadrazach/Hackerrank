@@ -9,12 +9,17 @@ function kaprekarCheck(num)
 {
     //3- sqaure the no.
     let square= (num*num)
+    console.log('square',square)
     let num_digits=num.toString().length
     //4- Square no. should equal to 2xd or 2xd-1
     console.log ( ((square.toString().length)===(2*num_digits)) || ((square.toString().length)===(2*num_digits-1)))
     //5- split no. into 2 substrings
     // console.log(square.toString().match(/.{1}/g))
-    let substrings=square.toString().match(/.{1}/g)
+    size=(square.toString().length/2).toString()
+    console.log(size)
+    var regex = new RegExp(".{"+ size+"}", 'g' );
+    let substrings=square.toString().match(regex)
+    console.log(substrings)
     //6- right substring should be equal to the digit
     console.log("right->",num_digits===substrings[1].length)
 
@@ -37,5 +42,5 @@ function kaprekarNumbers(p, q) {
      
     //10- if string.length>1 return string else INVALID 
 }
-console.log(kaprekarCheck(45))
+console.log(kaprekarCheck(98))
 // console.log(kaprekarNumbers(1,100))
