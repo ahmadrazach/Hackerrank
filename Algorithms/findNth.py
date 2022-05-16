@@ -1,38 +1,25 @@
 
-def findNth(num):
-    count=0
-    # 1- loop till all i=1 to i<=num
-    for i in range(1,int(1e+12)):
-        # Nth_num=0
+# MY APPROACH
+# def findNth(N):
+#     count=0
+#     # 1- loop till all i=1 to i<=num
+#     for i in range(1,int(1e+12)):
+#         # 2- check if digit is in the i
         
-    # 2- check if digit is in the i
-        
-        check_num=str(i)
-        # print("i->",i)
-        if not('9' in check_num):
-            # print("yes 9",check_num)
-            # pass
-            count+=1
-        # else:
-            # print("not 9",check_num)
-            # count+=1
-            # print("count->",count)
-        # for j in check_num:
-        # #     print(j,end="")
-
-        #     if ('9' in j):
-        # #         print("counted")
-        #         pass
-        #     else:
-        #         count+=1
-        # # if check_num.index('4')==1:
-        # print()
-        # 3- yes? count it : no pass
-            # print(i)
-            # count+=1
-        if count==num :
-            return (i)
-    # 4- return the number
+#         if not('9' in str(i)):
+#             count+=1
+#         if count==N :
+#             # 4- return the number
+#             return (i)
     
+# Optimal approach of converting it to base 9
 
-print(findNth(18))
+def findNth(N):
+    remainder=""
+    # toop till N !=0
+    while N!=0:
+        remainder+=str(N%9) # remainder
+        N//=9   #quotient
+    return remainder[::-1]
+
+print(findNth(9))
