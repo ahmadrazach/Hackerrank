@@ -1,14 +1,14 @@
-def helper(self,word1,word2):
-	not_same = 0
-	for i in range(len(word1)):
-		if word1[i] != word2[i]:
-			not_same += 1
-		if not_same > 1:
-			return False
-	if not_same == 1:
-		return True
-	else:
-		return False
+# def helper(self,word1,word2):
+# 	not_same = 0
+# 	for i in range(len(word1)):
+# 		if word1[i] != word2[i]:
+# 			not_same += 1
+# 		if not_same > 1:
+# 			return False
+# 	if not_same == 1:
+# 		return True
+# 	else:
+# 		return False
 
 def wordLadderLength(startWord, targetWord, wordList):
     # Code here
