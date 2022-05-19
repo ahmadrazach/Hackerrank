@@ -20,8 +20,8 @@ function minimumDistances(a) {
             } 
 
     if(min_dist===10000)
-    console.log(-1)
-    console.log(min_dist)
+    return(-1)
+    return(min_dist)
 }
 
-minimumDistances([7, 1, 3, 4, 1, 7])
+console.log(minimumDistances([7, 1, 3, 4, 1, 7]))
