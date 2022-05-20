@@ -12,18 +12,20 @@
 function howManyGames(p, d, m, s) {
     // Return the number of games you can buy
     //1- first game of p
-     let game=2
+     let count=0
     //2 - loop where cost start from p and end when cost >=s;cost+=p
-    for(let cost=p;cost<=s;cost+=p)
+    
+    while(s>=p)
        {
-        console.log(cost)
-        if(cost<=m)
-        {p-=d}
-        game++
+        
+        
+        count++
+        s-=p;
+        p=Math.max(p-d,m)
+        // cost+=p
         }
-    //3-  if cost>m:p-=d 
-    //4-  game++
-    return game
+    
+    return count
 }
 
 console.log(howManyGames(20,3,6,85))
