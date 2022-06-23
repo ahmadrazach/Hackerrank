@@ -34,6 +34,7 @@ function arrayManipulation(n, queries) {
 }
 */
 // Complexity -> O(n)
+
 function arrayManipulation(n,queries){
     //1- making a 1d array
     let arr = [...Array(n).fill(0)];
