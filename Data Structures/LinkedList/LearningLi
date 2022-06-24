@@ -32,6 +32,27 @@ class LinkedList {
             current=current.next;
         }
     }
+
+
+    //inserting last node
+    insertLast(data){
+        let node=new Node(data);
+        let current;
+
+        //if empty,make head
+        if(!this.head)
+        {
+            this.head=head;
+        }
+        else{
+            current=this.head;
+            while(current.next)
+            {
+                current=current.next;
+            }
+            current.next=node;
+        }
+    }
 }
 
 const ll=new LinkedList();
