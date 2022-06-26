@@ -23,6 +23,41 @@ class LinkedList {
         this.head=new Node(data,this.head)
     }
 
+    //inserting the node at specific position
+    insertAt(data,index){
+        
+        //if the index given out of range
+        if(index>0 && index >this.size)
+        {
+            return;
+        }
+
+        //if given index is the first
+        if(index===0)
+        {
+            this.head=new Node(data,this.head);
+            return;
+        }
+
+        const node=new Node(data);
+        let current,previous;
+
+        //set current to first
+        current=this.head;
+        let count=0;
+
+        while(count<index){
+            previous=current; //Node before index where we want to insert
+            count++;
+            current=current.next; //Node after index
+        }
+
+        node.next=current;
+        previous.next=node;
+
+
+        this.size++;
+    }
     //print the list data
     printListData(){
         let current=this.head;
@@ -58,7 +93,7 @@ class LinkedList {
 const ll=new LinkedList();
 ll.insertFirst(100);
 ll.insertFirst(200);
-
+ll.insertAt(500,10)
 ll.printListData();
 
 // start from here : https://youtu.be/ZBdE8DElQQU
