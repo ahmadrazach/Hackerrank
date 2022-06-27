@@ -52,9 +52,14 @@ function printSinglyLinkedList(node, sep) {
     }
 }
 
+/**
+ * We are recursively calling the function until we reach the end of the linked list, and then we print
+ * the data of the node
+ * @param llist - a pointer to the head node of a linked list to print in reverse
+ */
 function reversePrint(llist) {
     // Write your code here
-    if(!head)
+    if(!head )
     {
         return ;
     }
