@@ -49,6 +49,7 @@ function printSinglyLinkedList(node, sep, ws) {
  */
 function mergeLists(head1, head2) {
 
+    
     /* a dummy first node to
        hang the result on */
        let dummyNode = new Node(0);
@@ -61,14 +62,14 @@ function mergeLists(head1, head2) {
               
            /* if either list runs out,
            use the other list */
-           if(headA == null)
+           if(head1 == null)
            {
-               tail.next = headB;
+               tail.next = head2;
                break;
            }
-           if(headB == null)
+           if(head2 == null)
            {
-               tail.next = headA;
+               tail.next = head1;
                break;
            }
               
@@ -77,15 +78,15 @@ function mergeLists(head1, head2) {
            smaller, append it into tail and
            advance the head to the next Node
            */
-           if(headA.data <= headB.data)
+           if(head1.data <= head2.data)
            {
-               tail.next = headA;
-               headA = headA.next;
+               tail.next = head1;
+               head1 = head1.next;
            }
            else
            {
-               tail.next = headB;
-               headB = headB.next;
+               tail.next = head2;
+               head2 = head2.next;
            }
               
            /* Advance the tail */
